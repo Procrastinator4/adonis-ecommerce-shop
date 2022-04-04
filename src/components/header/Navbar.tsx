@@ -7,12 +7,12 @@ const Navbar = () => {
       {/* left section  */}
       <div className="flex space-x-16">
         {/* logo */}
-        <div
-          id="home"
+        <a
+          href="#home"
           className="text-2xl h-20 flex items-center font-poppins text-[#666] cursor-pointer relative uppercase"
         >
           <span className=" text-slate-800 font-bold ">Adonis </span> Store
-        </div>
+        </a>
         {/* menu link  */}
         <ul
           className={`${
