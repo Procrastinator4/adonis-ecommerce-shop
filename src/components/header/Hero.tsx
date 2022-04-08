@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,7 +20,11 @@ const Hero = () => {
         className="mySwiper w-full "
       >
         <SwiperSlide>
-          <div className="relative font-poppins h-full">
+          <motion.div
+            initial={{ opacity: 1, scale: 0 }}
+            animate={{ opacity: [0, 1], scale: [0, 1.1, 1] }}
+            className="relative font-poppins h-full"
+          >
             <div className="absolute left-[1%] md:left-[3%]  top-[30%] text-left lg:left-[10%] space-y-9">
               <h2 className="text-2xl sm:text-3xl text-[#666] ">
                 Women Collection 2018
@@ -34,7 +39,7 @@ const Hero = () => {
             <div>
               <img src="/overlay-girl.webp" alt="overlay-girl" />
             </div>
-          </div>
+          </motion.div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative font-poppins">
